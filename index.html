@@ -182,7 +182,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -192,7 +192,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/02/test/" itemprop="url">test</a></h1>
+                <a class="post-title-link" href="/2017/12/02/test/" itemprop="url">如何自己搭建一个angular脚手架</a></h1>
         
 
         <div class="post-meta">
@@ -258,7 +258,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-02T13:11:15+08:00">
                 2017-12-02
@@ -300,7 +300,31 @@
       
         
           
-            <p>hello everyone,this is leo’s blog</p>
+            <p><strong>本次以angular1.0脚手架为例</strong></p>
+<h1 id="首先明确目录结构"><a href="#首先明确目录结构" class="headerlink" title="首先明确目录结构"></a>首先明确目录结构</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">config</span><br><span class="line">build</span><br><span class="line">dist</span><br><span class="line">  static</span><br><span class="line">    js</span><br><span class="line">      all.min.js</span><br><span class="line">      bundle.js</span><br><span class="line">    style</span><br><span class="line">      bundle.css</span><br><span class="line">    index.html</span><br><span class="line">src</span><br><span class="line">  controller</span><br><span class="line">    ActivityCtrl.js</span><br><span class="line">    ActivityCtrl.js</span><br><span class="line">  service</span><br><span class="line">    ActivityService.js</span><br><span class="line">    ActivityService.js</span><br><span class="line">    ActivityService.js</span><br><span class="line">  app.js</span><br><span class="line">  route.js</span><br><span class="line">  view</span><br><span class="line">    user</span><br><span class="line">      user.html</span><br><span class="line">      userAdd.html</span><br><span class="line">    activity</span><br><span class="line">      index.html</span><br></pre></td></tr></table></figure>
+<h2 id="项目根目录下"><a href="#项目根目录下" class="headerlink" title="项目根目录下"></a>项目根目录下</h2><ul>
+<li>一个配置文件夹conf</li>
+<li>一个本地开发文件存放位置build</li>
+<li>一个线上运行文件存放位置dist</li>
+<li>一个本地编辑的源文件目录src</li>
+<li>一个视图文件夹</li>
+</ul>
+<blockquote>
+<p>cd进项目文件后执行命令行创建基本框架文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p dist config build src/&#123;controller,service,view/&#123;user,activity&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="完善相关src目录"><a href="#完善相关src目录" class="headerlink" title="完善相关src目录"></a>完善相关src目录</h2><hr>
+<ul>
+<li><p>创建入口文件app.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd src/</span><br><span class="line">touch app.js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建路由文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch route.js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建controller和service文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir controllers services</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>根据相关功能添加相应文件及目录</p>
 
           
         
@@ -378,7 +402,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-02T13:03:22+08:00">
                 2017-12-02
@@ -511,13 +535,22 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>
@@ -563,7 +596,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
