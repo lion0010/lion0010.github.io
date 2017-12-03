@@ -89,12 +89,13 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://oyqfj3fhi.bkt.clouddn.com/blog_gulp1-2017122173525.png">
 <meta property="og:image" content="http://oyqfj3fhi.bkt.clouddn.com/blog_gulp2-2017122173849.png">
+<meta property="og:image" content="http://oyqfj3fhi.bkt.clouddn.com/blog_gulp5-2017123203517.png">
 <meta property="og:image" content="http://oyqfj3fhi.bkt.clouddn.com/blog_gulp3-2017123202737.png">
 <meta property="og:image" content="http://oyqfj3fhi.bkt.clouddn.com/blog_gulp4-2017123203836.png">
 <meta property="og:image" content="http://oyqfj3fhi.bkt.clouddn.com/blog_gulp6-201712320407.png">
 <meta property="og:image" content="http://oyqfj3fhi.bkt.clouddn.com/blog_gulp7-2017123204811.png">
 <meta property="og:image" content="http://oyqfj3fhi.bkt.clouddn.com/blog_gulp8-2017123212045.png">
-<meta property="og:updated_time" content="2017-12-03T13:29:22.642Z">
+<meta property="og:updated_time" content="2017-12-03T13:31:14.451Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gulp工具的具体使用指南">
 <meta name="twitter:description" content="你听说过gulp么？你使用过gulp么？gulp是当前流行的代码打包工具，学会使用并理解其使用原理对一个开发者有重要的意义。">
@@ -367,22 +368,17 @@
 <li>在gulpfile.js中引入gulp<br><img src="http://oyqfj3fhi.bkt.clouddn.com/blog_gulp1-2017122173525.png" alt="blog_gulp1-2017122173525"></li>
 <li>使用gulp的task方法创建一个打包任务<br><img src="http://oyqfj3fhi.bkt.clouddn.com/blog_gulp2-2017122173849.png" alt="blog_gulp2-2017122173849"></li>
 <li>在script任务中添加代码打包方法<h3 id="添加一个gulp-load-plugins"><a href="#添加一个gulp-load-plugins" class="headerlink" title="添加一个gulp-load-plugins"></a>添加一个gulp-load-plugins</h3><blockquote>
-<p>这个插件能极大的简化我们的工作流程，他的作用是自动引入我们所安装的所有gulp插件，然后我们只需要在头部引入一下这个插件，然后可以通过这个插件名调用我们引入的插件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![blog_gulp5-2017123203517](http://oyqfj3fhi.bkt.clouddn.com/blog_gulp5-2017123203517.png)</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ol>
-<h3 id="添加一个插件gulp-concat"><a href="#添加一个插件gulp-concat" class="headerlink" title="添加一个插件gulp-concat"></a>添加一个插件gulp-concat</h3><blockquote>
-<p>这个插件可以让gulp拥有合并几个文件的功能</p>
+<p>这个插件能极大的简化我们的工作流程，他的作用是自动引入我们所安装的所有gulp插件，然后我们只需要在头部引入一下这个插件，然后可以通过这个插件名调用我们引入的插件。<br><img src="http://oyqfj3fhi.bkt.clouddn.com/blog_gulp5-2017123203517.png" alt="blog_gulp5-2017123203517"></p>
+<h3 id="添加一个插件gulp-concat"><a href="#添加一个插件gulp-concat" class="headerlink" title="添加一个插件gulp-concat"></a>添加一个插件gulp-concat</h3><p>这个插件可以让gulp拥有合并几个文件的功能</p>
 <h3 id="添加一个插件，安装依赖gulp-plumber"><a href="#添加一个插件，安装依赖gulp-plumber" class="headerlink" title="添加一个插件，安装依赖gulp-plumber"></a>添加一个插件，安装依赖gulp-plumber</h3><p>这个插件的作用简单来说就是一旦pipe中的某一steam报错了，保证下面的steam还继续执行</p>
 <h3 id="再添加一个代码压缩插件gulp-uglify"><a href="#再添加一个代码压缩插件gulp-uglify" class="headerlink" title="再添加一个代码压缩插件gulp-uglify"></a>再添加一个代码压缩插件gulp-uglify</h3><p>uglify顾名思义就是丑化代码，让代码格式消失，压缩代码</p>
 <h3 id="然后去使用插件并完成压缩打包任务"><a href="#然后去使用插件并完成压缩打包任务" class="headerlink" title="然后去使用插件并完成压缩打包任务"></a>然后去使用插件并完成压缩打包任务</h3><p><img src="http://oyqfj3fhi.bkt.clouddn.com/blog_gulp3-2017123202737.png" alt="blog_gulp3-2017123202737"></p>
-<ol>
+</blockquote>
+</li>
 <li>配置执行打包任务<br>使用gulp.task创建任务<br><img src="http://oyqfj3fhi.bkt.clouddn.com/blog_gulp4-2017123203836.png" alt="blog_gulp4-2017123203836"></li>
 <li>然后我们在gulpfile.js同目录下执行打包命令<br><img src="http://oyqfj3fhi.bkt.clouddn.com/blog_gulp6-201712320407.png" alt="blog_gulp6-201712320407"><br>这样我们的代码就打包成功了，可以看到<br>dist和build文件夹下都自动生成了我们打包的代码</li>
 <li>实现文件保存自动压缩</li>
 </ol>
-</blockquote>
 <p><img src="http://oyqfj3fhi.bkt.clouddn.com/blog_gulp7-2017123204811.png" alt="blog_gulp7-2017123204811"><br>添加一个gulp任务，并在任务里添加一个watch事件去监听文件的变化，当文件变化时去执行指定的任务即完成了代码的自动打包</p>
 <ol>
 <li>还有一件很重要的事情叫做添加默认任务<blockquote>
