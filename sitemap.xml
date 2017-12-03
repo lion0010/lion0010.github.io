@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
+  <url>
+    <loc>http://hexo.lao7.site/categories/index.html</loc>
+    
+    <lastmod>2017-12-03T13:52:33.757Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hexo.lao7.site/2017/12/03/gulp%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2017-12-03T13:33:49.138Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hexo.lao7.site/2017/12/02/angular1.0%E8%84%9A%E6%89%8B%E6%9E%B6%E6%90%AD%E5%BB%BA/</loc>
+    
+    <lastmod>2017-12-02T09:04:15.553Z</lastmod>
+    
+  </url>
+  
 </urlset>
