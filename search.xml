@@ -11,7 +11,7 @@
   <entry>
     <title><![CDATA[vue-3chapter-computed]]></title>
     <url>%2F2017%2F12%2F05%2Fvue-3chapter-computed%2F</url>
-    <content type="text"><![CDATA[##第三章 计算属性 3.1什么是计算属性计算属性computed 是为了解决复杂的逻辑语句，使得vue模板中的语句不是那么臃肿和难以阅读 3.2计算属性的用法计算属性里可以完成各种复杂的逻辑，包括运算、函数调用等，但是最终要返回一个结果。 计算属性中默认有getter和setter方法，get用来读取，set在写入时会触发，默认情况下会调用get方法123456789101112computed:&#123; fullName:&#123; get:function()&#123; return this.firstName+&apos; &apos;+this.lastName; &#125;, set:function(newValue)&#123; var names = newValue.split(&apos; &apos;); this.firstName = names[0]; this.lastName = names[names.length-1]; &#125; &#125;&#125;]]></content>
+    <content type="text"><![CDATA[##第三章 计算属性 3.1什么是计算属性计算属性computed 是为了解决复杂的逻辑语句，使得vue模板中的语句不是那么臃肿和难以阅读 3.2计算属性的用法计算属性里可以完成各种复杂的逻辑，包括运算、函数调用等，但是最终要返回一个结果。 计算属性中默认有getter和setter方法，get用来读取，set在写入时会触发，默认情况下会调用get方法123456789101112computed:&#123; fullName:&#123; get:function()&#123; return this.firstName+&apos; &apos;+this.lastName; &#125;, set:function(newValue)&#123; var names = newValue.split(&apos; &apos;); this.firstName = names[0]; this.lastName = names[names.length-1]; &#125; &#125;&#125; 计算属性还有两个很实用的小技巧： 计算属性可以依赖其他的计算属性 计算属性还可以依赖其它实例的数据 3.3计算属性缓存我们仔细思考不难发现，计算属性实现的功能method方法同样可以实现，那么我们为什么还要使用计算属性呢？ 原因就是计算属性是基于他的依赖来缓存的。一个计算属性所依赖的数据发生变化时，它才会重新取值，所以只要依赖不改变，计算属性也就不更新。]]></content>
       <tags>
         <tag>vue实战学习</tag>
       </tags>
