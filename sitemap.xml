@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://hexo.lao7.site/2017/12/05/vue-3chapter-computed/</loc>
+    
+    <lastmod>2017-12-05T14:00:12.391Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hexo.lao7.site/2017/12/02/angular1.0%E8%84%9A%E6%89%8B%E6%9E%B6%E6%90%AD%E5%BB%BA/</loc>
+    
+    <lastmod>2017-12-05T06:54:52.606Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://hexo.lao7.site/2017/12/03/gulp%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     
-    <lastmod>2017-12-04T14:44:35.110Z</lastmod>
+    <lastmod>2017-12-05T06:54:30.067Z</lastmod>
     
   </url>
   
@@ -12,13 +26,6 @@
     <loc>http://hexo.lao7.site/categories/index.html</loc>
     
     <lastmod>2017-12-03T13:52:33.757Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://hexo.lao7.site/2017/12/02/angular1.0%E8%84%9A%E6%89%8B%E6%9E%B6%E6%90%AD%E5%BB%BA/</loc>
-    
-    <lastmod>2017-12-02T09:04:15.553Z</lastmod>
     
   </url>
   
