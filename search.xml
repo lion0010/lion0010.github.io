@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vue-4chapter-v-bind&class&style]]></title>
+    <url>%2F2017%2F12%2F05%2Fvue-4chapter-v-bind%2F</url>
+    <content type="text"><![CDATA[第四章v-bind及class与style绑定4.1绑定class的几种方式 1&lt;div :class=&quot;&#123;&apos;active&apos;:isActive&#125;&quot;&gt;&lt;/div&gt; 上述示例，当实例中的isActive数据为true的时候会自动帮div添加一个active类同样，也可以在对象中传入多个属性来动态切换class，而且:class可以与普通的class共存1&lt;div :class=&quot;&#123;&apos;active&apos;:isActive,&apos;error&apos;:isError&#125;&quot;&gt;&lt;/div&gt; 当:class的表达式过长或逻辑复杂时，还可以绑定一个计算属性，这是一种很友好和常见的用法，一般当条件多于两个时，都可以使用data或computed例如：1234567891011121314151617181920&lt;div id=&quot;app&quot;&gt; &lt;div :class=&quot;classes&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt; var app = new Vue(&#123; el:&apos;#app&apos;, data:&#123; isActive : true, isError : null &#125;, computed:&#123; classes:function()&#123; return &#123; active: this.isActive &amp;&amp; !this.error, &apos;text-fail&apos;:this.error &amp;&amp; this.error.type === &apos;fail&apos; &#125; &#125; &#125; &#125;)&lt;/script&gt; 可以使用三元表达式来根据条件切换class1&lt;div :class=&quot;[isActive ? activesCls : &apos;&apos;]&quot;&gt;&lt;/div&gt; 当然，class也可以使用computed和methods，这样加上data一共有三种方法来使用 在组件上使用:class Vue.component(‘my-component’,{ template: “一些文本“}); var app=new Vue({ el:"#app", data:{ isActive:true } })]]></content>
+      <tags>
+        <tag>vue实战学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[vue-3chapter-computed]]></title>
     <url>%2F2017%2F12%2F05%2Fvue-3chapter-computed%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[##第三章 计算属性 3.1什么是计算属性计算属性computed 是为了解决复杂的逻辑语句，使得vue模板中的语句不是那么臃肿和难以阅读 3.2计算属性的用法计算属性里可以完成各种复杂的逻辑，包括运算、函数调用等，但是最终要返回一个结果。 计算属性中默认有getter和setter方法，get用来读取，set在写入时会触发，默认情况下会调用get方法123456789101112computed:&#123; fullName:&#123; get:function()&#123; return this.firstName+&apos; &apos;+this.lastName; &#125;, set:function(newValue)&#123; var names = newValue.split(&apos; &apos;); this.firstName = names[0]; this.lastName = names[names.length-1]; &#125; &#125;&#125;]]></content>
+      <tags>
+        <tag>vue实战学习</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[gulp工具的具体使用指南]]></title>
